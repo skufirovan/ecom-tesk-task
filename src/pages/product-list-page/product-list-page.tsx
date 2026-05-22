@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
-import { getProducts } from "@/api/products-api"
-import { ErrorMessage, ProductList, Search, Spinner } from "@/components"
-import type { Product } from "@/shared/types"
+import { getProducts, type GetProductsResponse } from "@/api/products-api"
+import {
+  ErrorMessage,
+  Pagination,
+  ProductList,
+  Search,
+  Spinner,
+} from "@/components"
 import { parseSearchOptions } from "@/shared/utils"
 import s from "./product-list-page.module.css"
 
 export const ProductListPage = () => {
   const [searchParams] = useSearchParams()
   const options = parseSearchOptions(searchParams)
-  const [products, setProducts] = useState<Product[]>([])
+  const [productsResponse, setProductsResponse] = useState<GetProductsResponse>(
+    { products: [], total: 0 }
+  )
   const [error, setError] = useState<Error | undefined>(undefined)
   const [isLoading, setIsLoading] = useState<boolean>(false)
 
@@ -17,7 +24,7 @@ export const ProductListPage = () => {
     setIsLoading(true)
 
     getProducts(options)
-      .then(setProducts)
+      .then(setProductsResponse)
       .catch(setError)
       .finally(() => setIsLoading(false))
   }, [searchParams])
@@ -28,7 +35,14 @@ export const ProductListPage = () => {
     <section className={s.page}>
       <h1>Товары</h1>
       <Search />
-      {isLoading ? <Spinner /> : <ProductList products={products} />}
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <div>
+          <ProductList products={productsResponse.products} />
+          <Pagination total={productsResponse.total} />
+        </div>
+      )}
     </section>
   )
 }

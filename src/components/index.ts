@@ -1,5 +1,6 @@
 export { ErrorMessage } from "./error-message/error-message"
 export { Modal } from "./modal/modal"
+export { Pagination } from "./pagination/pagination"
 export { ProductDetailed } from "./product-detailed/product-detailed"
 export { ProductList } from "./product-list/product-list"
 export { Search } from "./search/search"

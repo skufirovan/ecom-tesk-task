@@ -9,23 +9,32 @@ export type GetProductsOptions = {
   }
 }
 
-export function getProducts(options?: GetProductsOptions): Promise<Product[]> {
+export type GetProductsResponse = {
+  products: Product[]
+  total: number
+}
+
+export function getProducts(
+  options: GetProductsOptions
+): Promise<GetProductsResponse> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       try {
-        let products = productsData as Product[]
+        const products = productsData as Product[]
 
         if (!Array.isArray(products))
           throw new Error("Не удалось загрузить товары")
 
-        const search = options?.search
+        let result = products
+        const { offset, limit } = options.pagination
+        result = result.slice(offset, offset + limit)
+
+        const search = options.search
         if (search) {
-          products = products.filter((p) =>
-            p.title.toLowerCase().includes(search)
-          )
+          result = result.filter((p) => p.title.toLowerCase().includes(search))
         }
 
-        resolve(products)
+        resolve({ products: result, total: products.length })
       } catch (error) {
         reject(error)
       }

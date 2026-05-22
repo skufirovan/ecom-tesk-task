@@ -1,0 +1,36 @@
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.first {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.last {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.single {
+  border-radius: 0.5rem;
+}
+
+.middle {
+  border: none;
+  cursor: default;
+}
+
+.active {
+  z-index: 10;
+  color: white;
+  background-color: var(--color-accent);
+  cursor: default;
+}
