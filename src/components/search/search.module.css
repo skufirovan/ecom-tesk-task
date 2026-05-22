@@ -1,0 +1,30 @@
+.search {
+  position: relative;
+  display: flex;
+}
+
+.input {
+  width: 24rem;
+  border: 1px solid var(--color-text-secondary);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 40px;
+
+  &::placeholder {
+    color: var(--color-text-secondary);
+  }
+
+  &:focus-visible {
+    border: 1px solid white;
+    outline: 2px solid var(--color-text-secondary);
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-secondary);
+}
