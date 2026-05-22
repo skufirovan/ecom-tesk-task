@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "title": "Смарт‑часы X100",
+    "price": 7490,
+    "category": "Гаджеты",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "Водонепроницаемые, GPS, 7‑дневный аккумулятор"
+  },
+  {
+    "id": 2,
+    "title": "Беспроводные наушники Pro",
+    "price": 4990,
+    "category": "Аудио",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "Шумоподавление, 30 часов работы, Bluetooth 5.3"
+  },
+  {
+    "id": 3,
+    "title": "Фитнес‑браслет Active",
+    "price": 3290,
+    "category": "Гаджеты",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "Шагомер, пульсометр, мониторинг сна, водонепроницаемый"
+  },
+  {
+    "id": 4,
+    "title": "Смартфон Z10",
+    "price": 24990,
+    "category": "Смартфоны",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "6.5″ экран, 128 ГБ, тройная камера 50 МП"
+  },
+  {
+    "id": 5,
+    "title": "Портативная колонка SoundMax",
+    "price": 3990,
+    "category": "Аудио",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "10 Вт, влагозащита, 12 часов работы, TWS"
+  },
+  {
+    "id": 6,
+    "title": "Робот‑пылесос CleanBot",
+    "price": 15990,
+    "category": "Дом",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "Навигация LiDAR, 3000 Па, управление с телефона"
+  },
+  {
+    "id": 7,
+    "title": "Электронная книга Reader",
+    "price": 11990,
+    "category": "Гаджеты",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "6″ E-Ink, подсветка, 32 ГБ, 8 недель автономности"
+  },
+  {
+    "id": 8,
+    "title": "Умная лампочка RGB",
+    "price": 890,
+    "category": "Умный дом",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "16 млн цветов, управление с телефона, расписание"
+  },
+  {
+    "id": 9,
+    "title": "Внешний аккумулятор PowerBank 20000",
+    "price": 2490,
+    "category": "Аксессуары",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "20000 мАч, быстрая зарядка, 3 порта"
+  },
+  {
+    "id": 10,
+    "title": "Стилус для планшета PenPro",
+    "price": 1990,
+    "category": "Аксессуары",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "Чувствительность к нажатию, магнитная зарядка"
+  },
+  {
+    "id": 11,
+    "title": "Игровая мышь Vortex",
+    "price": 3490,
+    "category": "Компьютеры",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "16000 DPI, RGB подсветка, 6 программируемых кнопок"
+  },
+  {
+    "id": 12,
+    "title": "Механическая клавиатура TypeMaster",
+    "price": 6990,
+    "category": "Компьютеры",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "Красные переключатели, RGB, TKL, USB-C"
+  },
+  {
+    "id": 13,
+    "title": "WEB-камера 4K StreamCam",
+    "price": 8990,
+    "category": "Компьютеры",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "4K при 30fps, автофокус, двойной микрофон"
+  },
+  {
+    "id": 14,
+    "title": "Зарядная станция MagDock",
+    "price": 3990,
+    "category": "Аксессуары",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "Магнитная зарядка для часов, телефона и наушников"
+  },
+  {
+    "id": 15,
+    "title": "Термокружка TempMug",
+    "price": 4490,
+    "category": "Дом",
+    "image": "https://www.paintgarden.com/cdn/shop/products/757B82.png?v=1658181034",
+    "description": "Поддержание температуры, аккумулятор на 2 часа"
+  }
+]

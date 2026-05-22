@@ -1,0 +1,21 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 3rem;
+}
+
+.icon {
+  animation: spin 1.7s linear infinite;
+}
