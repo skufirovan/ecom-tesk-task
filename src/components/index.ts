@@ -1,3 +1,5 @@
 export { ErrorMessage } from "./error-message/error-message"
+export { Modal } from "./modal/modal"
+export { ProductDetailed } from "./product-detailed/product-detailed"
 export { ProductList } from "./product-list/product-list"
 export { Spinner } from "./spinner/spinner"
