@@ -51,10 +51,12 @@ export const ProductListPage = () => {
           {isLoading ? (
             <Spinner />
           ) : (
-            <>
-              <ProductList products={productsResponse.products} />
+            <div className={s.productsContainer}>
+              <div className={s.products}>
+                <ProductList products={productsResponse.products} />
+              </div>
               <Pagination total={productsResponse.total} />
-            </>
+            </div>
           )}
         </div>
       </div>

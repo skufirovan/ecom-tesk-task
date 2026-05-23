@@ -32,7 +32,14 @@ p {
   margin: 0;
 }
 
+html,
+body,
+#root {
+  height: 100%;
+}
+
 body {
+  overflow-y: hidden;
   min-width: 320px;
   font-family: var(--font-main);
   background: var(--color-bg-primary);
