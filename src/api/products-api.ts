@@ -1,11 +1,21 @@
 import type { Product } from "@/shared/types"
 import productsData from "./mock.json"
 
+export const SORT_FIELDS = ["price"] as const
+export const SORT_ORDERS = ["asc", "desc"] as const
+
+export type SortField = (typeof SORT_FIELDS)[number]
+export type SortOrder = (typeof SORT_ORDERS)[number]
+
 export type GetProductsOptions = {
   search?: string
   pagination: {
     limit: number
     offset: number
+  }
+  sorting?: {
+    sort: SortField
+    order: SortOrder
   }
 }
 
@@ -25,16 +35,27 @@ export function getProducts(
         if (!Array.isArray(products))
           throw new Error("Не удалось загрузить товары")
 
-        let result = products
-        const { offset, limit } = options.pagination
-        result = result.slice(offset, offset + limit)
+        let result = [...products]
 
         const search = options.search
         if (search) {
           result = result.filter((p) => p.title.toLowerCase().includes(search))
         }
 
-        resolve({ products: result, total: products.length })
+        if (options.sorting) {
+          const { sort, order } = options.sorting
+
+          result.sort((a, b) => {
+            return order === "asc" ? a[sort] - b[sort] : b[sort] - a[sort]
+          })
+        }
+
+        const { offset, limit } = options.pagination
+
+        resolve({
+          products: result.slice(offset, offset + limit),
+          total: result.length,
+        })
       } catch (error) {
         reject(error)
       }

@@ -1,4 +1,8 @@
-import type { GetProductsOptions } from "@/api/products-api"
+import {
+  SORT_FIELDS,
+  SORT_ORDERS,
+  type GetProductsOptions,
+} from "@/api/products-api"
 import { ITEMS_PER_PAGE } from "./constants"
 
 export function clsx(
@@ -7,10 +11,18 @@ export function clsx(
   return classes.filter(Boolean).join(" ")
 }
 
-export function parseSearchOptions(params: URLSearchParams) {
-  let page = Number(params.get("page"))
+function isOneOf<T extends readonly string[]>(
+  value: string | null,
+  values: T
+): value is T[number] {
+  return value !== null && values.includes(value)
+}
 
-  if (Number.isNaN(page)) page = 1
+export function parseSearchOptions(params: URLSearchParams) {
+  const pageParam = params.get("page")
+  let page = pageParam ? Number(pageParam) : 1
+
+  if (Number.isNaN(page) || page < 1) page = 1
 
   const options: GetProductsOptions = {
     pagination: {
@@ -21,6 +33,16 @@ export function parseSearchOptions(params: URLSearchParams) {
 
   const search = params.get("search")
   if (search) options.search = search.toLowerCase()
+
+  const sort = params.get("sort")
+  const order = params.get("order")
+
+  if (isOneOf(sort, SORT_FIELDS) && isOneOf(order, SORT_ORDERS)) {
+    options.sorting = {
+      sort,
+      order,
+    }
+  }
 
   return options
 }
