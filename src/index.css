@@ -8,7 +8,9 @@
   --color-text-primary: #111827;
   --color-text-secondary: #6b7280;
   --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
   --color-border: #e5e7eb;
+  --color-border-hover: #d1d5db;
 
   --shadow-card: 0 10px 25px rgb(15 23 42 / 8%);
 
@@ -42,6 +44,7 @@ h1 {
   line-height: 1.15;
   font-weight: 700;
   color: var(--color-text-primary);
+  cursor: default;
 }
 
 h2 {
@@ -49,6 +52,7 @@ h2 {
   line-height: 1.25;
   font-weight: 600;
   color: var(--color-text-primary);
+  cursor: default;
 }
 
 p {
@@ -56,6 +60,7 @@ p {
   line-height: 1.6;
   font-weight: 400;
   color: var(--color-text-secondary);
+  cursor: default;
 }
 
 button {

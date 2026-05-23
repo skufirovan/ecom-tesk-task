@@ -5,12 +5,16 @@
 
 .input {
   width: 24rem;
-  border: 1px solid var(--color-text-secondary);
+  border: 1px solid var(--color-border-hover);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 40px;
 
   &::placeholder {
-    color: var(--color-text-secondary);
+    color: var(--color-border-hover);
+  }
+
+  &:hover {
+    border-color: var(--color-border-hover);
   }
 
   &:focus-visible {
@@ -26,5 +30,9 @@
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
+  color: var(--color-border-hover);
+}
+
+.search:has(.input:focus-visible) .icon {
   color: var(--color-text-secondary);
 }
