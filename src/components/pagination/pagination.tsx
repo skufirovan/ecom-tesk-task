@@ -4,7 +4,7 @@ import { generatePagination } from "@/shared/utils"
 import {
   PaginationNumber,
   type PaginationNumberPosition,
-} from "./pagination-number"
+} from "./pagination-number/pagination-number"
 import s from "./pagination.module.css"
 
 type Props = {

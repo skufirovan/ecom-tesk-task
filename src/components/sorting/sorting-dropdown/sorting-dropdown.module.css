@@ -1,0 +1,17 @@
+.dropdown {
+  position: relative;
+  width: fit-content;
+  z-index: 50;
+}
+
+.trigger {
+  width: 40px;
+  height: 40px;
+  padding: 0.5rem;
+}
+
+.content {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+}

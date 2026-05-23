@@ -6,7 +6,7 @@ import {
   Pagination,
   ProductList,
   Search,
-  SortingDropdown,
+  Sorting,
   Spinner,
 } from "@/components"
 import { parseSearchOptions } from "@/shared/utils"
@@ -35,19 +35,29 @@ export const ProductListPage = () => {
   return (
     <section className={s.page}>
       <h1>Товары</h1>
-      <div className={s.controls}>
-        <Search />
-        <SortingDropdown />
-      </div>
 
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        <div>
-          <ProductList products={productsResponse.products} />
-          <Pagination total={productsResponse.total} />
+      <div className={s.content}>
+        <aside className={s.sidebar}>
+          <Sorting />
+        </aside>
+
+        <div className={s.main}>
+          <div className={s.toolbar}>
+            <Search />
+            <div className={s.mobileSorting}>
+              <Sorting />
+            </div>
+          </div>
+          {isLoading ? (
+            <Spinner />
+          ) : (
+            <>
+              <ProductList products={productsResponse.products} />
+              <Pagination total={productsResponse.total} />
+            </>
+          )}
         </div>
-      )}
+      </div>
     </section>
   )
 }
